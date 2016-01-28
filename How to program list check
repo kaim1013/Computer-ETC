@@ -1,0 +1,21 @@
+* 프로그램 설치 리스트 확인 방법 *
+
+1. 시작 → 실행 → cmd -> wmic
+
+(프롬프트가 wmic:root\cli>  로 변경됨)
+ 
+2. 이름과 버전, 설치일을 화면상에 출력하고 싶다면
+
+wmic:root\cli> product get name, version, InstallDate
+(주석: get 다음에 알고 싶은 상세항목 정보를 입력)
+ 
+2. 이름과 버전, 설치일을  C:\product_get_test.txt 라는 파일로 저장하고 싶다면
+
+wmic:root\cli> /output:C:\product_get_test.txt product get name, version, InstallDate
+(주석: get 다음에 알고 싶은 상세항목 정보를 입력)
+ 
+
+
+참고: 설치된 프로그램의 모든 정보를 확인하고 싶다면
+
+wmic:root\cli> product
